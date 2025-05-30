@@ -12,8 +12,6 @@ class EmpresaCable {
         $this->canales = [];
         $this->contratos = [];
     }
-    // Después con los setters les voy agregando objetos dentro de cada array
-
 
     public function incorporarContrato($plan, $objCliente, $fechaInicio, $fechaVencimiento, $esWeb) {
         $i = 0;

@@ -9,15 +9,18 @@ class ContratoWeb extends Contrato {
         parent::__construct($fechaInicio, $fechaVencimiento, $plan, $estado, $costo, $renueva, $objCliente);
         $this->descuento = $descuento;
     }
-     // Getter y setter 
-    public function getDescuento() {
-        return $this->descuento;
+//--------------------------------------------------------------------------------------------------
+
+public function getDescuento() {
+    return $this->descuento;
 }
 
 public function setDescuento($nuevoDescuento) {
     $this->descuento = $nuevoDescuento;
 }
 
+
+//--------------------------------------------------------------------------------------------------
 
     public function calcularImporte() {
         // Calculo con lo que hereda de Contrato
@@ -30,6 +33,7 @@ public function setDescuento($nuevoDescuento) {
         return $importeConDescuento;
     }
 
+//--------------------------------------------------------------------------------------------------
 
     public function __toString() {
         $cadena = parent::__toString(); // Uso el toString que viene de Contrato

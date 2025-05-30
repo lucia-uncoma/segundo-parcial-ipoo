@@ -25,35 +25,66 @@ class Contrato {
         $this->codigo = self::$ultimoCodigo;  // lo asignamos al canal actual
     }
 
-    public function getCliente() {
-        return $this->objCliente;
-    }
-    public function getEstado() {
-        return $this->estado;
-    }
-    public function getPlan() {
-        return $this->plan;
-    }
-    
-    public function setEstado($estado) {
-        $this->estado = $estado;
-    }
-    public function getCodigo() {
-        return $this->codigo; 
-    }
-    
-    public function getFechaVencimiento() {
-        return $this->fechaVencimiento;
-    }
-    
-    public function setFechaVencimiento($fecha) {
-        $this->fechaVencimiento = $fecha;
-    }
-    
-    public function setCosto($costo) {
-        $this->costo = $costo;
-    }
+//--------------------------------------------------------------------------------------------------
 
+
+public function getFechaInicio() {
+    return $this->fechaInicio;
+}
+
+public function getFechaVencimiento() {
+    return $this->fechaVencimiento;
+}
+
+public function getPlan() {
+    return $this->plan;
+}
+
+public function getEstado() {
+    return $this->estado;
+}
+
+public function getCosto() {
+    return $this->costo;
+}
+
+public function getRenueva() {
+    return $this->renueva;
+}
+
+public function getCliente() {
+    return $this->objCliente;
+}
+
+public function setFechaInicio($fechaInicio) {
+    $this->fechaInicio = $fechaInicio;
+}
+
+public function setFechaVencimiento($fechaVencimiento) {
+    $this->fechaVencimiento = $fechaVencimiento;
+}
+
+public function setPlan($plan) {
+    $this->plan = $plan;
+}
+
+public function setEstado($estado) {
+    $this->estado = $estado;
+}
+
+public function setCosto($costo) {
+    $this->costo = $costo;
+}
+
+public function setRenueva($renueva) {
+    $this->renueva = $renueva;
+}
+
+public function setCliente($cliente) {
+    $this->objCliente = $cliente;
+}
+
+//--------------------------------------------------------------------------------------------------
     // Método estático que recibe un contrato y calcula días vencidos
     // Es estático para funcionar con cualquier objeto de Contrato y
     // poder usarlo en cualquier instancia
@@ -106,6 +137,8 @@ class Contrato {
 
         return $importeFinal;
     }
+
+//--------------------------------------------------------------------------------------------------
 
     public function __toString() {
 

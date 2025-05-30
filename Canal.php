@@ -7,7 +7,6 @@ class Canal {
     private $tipo;
     private $importe;
     private $esHD;
- 
 
     public function __construct($tipo, $importe, $esHD) {
         $this->tipo = $tipo;
@@ -16,11 +15,33 @@ class Canal {
         self::$ultimoId++;            // incrementamos el ID que todas conocen
         $this->id = self::$ultimoId;  // lo asignamos al canal actual
     }
+//--------------------------------------------------------------------------------------------------
 
-    public function getImporte() {
-        return $this->importe;
-    }
+public function getTipo() {
+    return $this->tipo;
+}
 
+public function getImporte() {
+    return $this->importe;
+}
+
+public function getEsHD() {
+    return $this->esHD;
+}
+
+public function setTipo($tipo) {
+    $this->tipo = $tipo;
+}
+
+public function setImporte($importe) {
+    $this->importe = $importe;
+}
+
+public function setEsHD($esHD) {
+    $this->esHD = $esHD;
+}
+
+//--------------------------------------------------------------------------------------------------
     public function __toString() {
         $hd = $this->esHD ? "HD" : "SD";
         return "Canal: {$this->tipo}, Importe: {$this->importe}, Calidad: {$hd}";

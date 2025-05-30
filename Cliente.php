@@ -14,6 +14,16 @@ class Cliente {
         $this->nroDoc = $nroDoc;
     }
 
+    //--------------------------------------------------------------------------------------------------
+
+    public function getNombre() {
+        return $this->nombre;
+    }
+    
+    public function getApellido() {
+        return $this->apellido;
+    }
+    
     public function getTipoDoc() {
         return $this->tipoDoc;
     }
@@ -21,6 +31,25 @@ class Cliente {
     public function getNroDoc() {
         return $this->nroDoc;
     }
+    
+    public function setNombre($nombre) {
+        $this->nombre = $nombre;
+    }
+    
+    public function setApellido($apellido) {
+        $this->apellido = $apellido;
+    }
+    
+    public function setTipoDoc($tipoDoc) {
+        $this->tipoDoc = $tipoDoc;
+    }
+    
+    public function setNroDoc($nroDoc) {
+        $this->nroDoc = $nroDoc;
+    }
+    
+//--------------------------------------------------------------------------------------------------
+
     public function __toString() {
         return "Cliente: {$this->nombre} {$this->apellido} (Tipo de Documento: {$this->tipoDoc}, Número de Documento: {$this->nroDoc})";
     }
